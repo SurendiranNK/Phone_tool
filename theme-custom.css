@@ -1,0 +1,157 @@
+/** No CSS for this example */
+
+.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-arrow,
+.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-trigger {
+  color:#fff;
+}
+
+.mat-select-arrow,
+.mat-select-disabled .mat-select-value,
+.mat-select-trigger {
+  color:#fff;
+  
+}
+
+.mat-select-panel
+{
+	min-width:300px !important;
+	    margin-top:37px !important;
+	    margin-left: 6px !important;
+}
+
+.mat-select-panel:focus:not(.mat-select-disabled).mat-primary
+{
+	min-width:300px !important;
+}
+
+
+.login .mat-input-container
+{
+	display:block !important;
+}
+
+
+.primary-color {
+ color:#2196F3 !important;
+  }
+  
+.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-underline
+  {
+	  background-color:#fff !important;
+  }
+  
+  .mat-select-underline
+  {
+	  background-color:#fff !important;
+  }
+  
+  
+  .mat-fab.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent
+  {
+	  background-color:#2196F3 !important;
+  }
+  
+  
+  .mat-select-value
+  {
+	  color:#fff !important;
+  }
+  
+  
+ .mat-option.mat-selected.mat-primary, .mat-primary .mat-option.mat-selected
+ {
+	 color:#fff !important;
+ }	 
+  
+/*  .mat-select-content, .mat-option
+  {
+	 padding: 0px 10px 0px 10px !important;
+  }
+   */
+   
+   
+   
+   
+  /* Amar 10/8/17*/ 
+   
+   
+   .mat-button, .mat-icon-button, .mat-raised-button
+   
+   {
+	       font-size: 16px !important;
+   }
+   
+   .example-sidenav .mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button
+   {
+	   padding:0px !important;
+   }
+   
+   .paading-none
+   {
+	   padding:0px !important;
+   }
+   
+   .border-btm
+   {
+	   border-bottom:1px solid #555555 !important;
+   }
+   
+   .setting-icon-text-list .mat-icon
+{
+	color:#333 !important;
+	    padding-top:25px !important;
+}
+   
+   
+   .main-content-box
+{
+	padding:30px 20px 0px 20px;
+	min-height:562px;
+	overflow-y:scroll;
+}
+
+.demo-list
+{
+	padding-bottom:10px;
+}
+
+.demo-list .mat-list-item-content
+{
+	height:30px !important;
+}
+   
+  /* Amar 10/8/17*/ 
+  
+    /* Amar 29/8/17*/ 
+  
+  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar
+  {
+	  background-color:rgba(33, 150, 243, 0.63);
+  }
+  
+  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb
+  {
+	    background-color:#2196F3 !important;
+  }
+  
+.mat-input-ripple {
+    background-color: #0099cc;
+}
+
+.mat-focused .mat-input-placeholder
+{
+ color: #0099cc !important;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background
+{
+	background-color:#2196F3 !important;
+}
+
+.mat-ink-bar
+{
+	background-color:#2196F3 !important;
+}
+
+    /* Amar 29/8/17*/ 
+
