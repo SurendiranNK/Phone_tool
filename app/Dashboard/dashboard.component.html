@@ -1,0 +1,163 @@
+
+<!--   <span class="padd-left20">{{username}} </span> -->
+
+
+  <md-sidenav  class="example-sidenav">
+  
+      <md-toolbar class="mat-elevation-z5"  layout="row" layout-align="space-between center">
+
+<div class="branding">
+      <div class="logo">
+<img _ngcontent-c16="" alt="" src="./app/assets/nav-logo1.png">
+
+      </div>
+</div>
+  <button md-button (click)="shutdown()" [routerLink]="['/login']" apptogglefullscreen="" class="mat-icon-button padd-icon" md-icon-button=""><span class="mat-button-wrapper ">
+      <md-icon class="mat-icon material-icons" role="img" aria-hidden="true">lock_outline</md-icon>
+  </span>
+  </button>
+  
+<button  (click)="close_app()" apptogglefullscreen="" class="mat-icon-button padd-icon" md-icon-button=""><span class="mat-button-wrapper">
+      <md-icon class="mat-icon material-icons" role="img" aria-hidden="true">power_settings_new</md-icon>
+  </span></button>
+
+       
+</md-toolbar>
+  
+  
+
+  <md-nav-list class="mat-list-item" role="listitem">
+  
+  <md-list-item class="mat-list-item padd-tb10" role="listitem">
+    
+     <a md-line [routerLink]="['/editprofile']"> <button md-icon-button>
+        <md-icon>account_circle</md-icon>
+      </button>{{username}}
+   <span class="material-list-subtitle">{{usertype}}</span>
+   </a>
+  
+  </md-list-item>
+   
+<div class="sidenav-item padd-tb10"><!---->
+<!----><a class="sidenav-anchor mat-ripple mat-list-item" md-list-item="" md-ripple="" role="listitem"><div class="mat-list-item-content">
+  <div class="mat-list-item-ripple mat-ripple" md-ripple="">
+  </div>
+<button class="Login-button" md-button (click)="getloginDetails()" >
+  <div class="mat-list-text"></div>
+  <md-icon role="img" class="material-icons mat-icon" aria-label="layers">note_add</md-icon>
+  <span class="sidenav-item-name fade-in-on-icon-sidenav">New Report</span>
+  <span fxflex=""></span>
+  <!---->
+  <!----><md-icon class="sidenav-item-dropdown-indicator rotate fade-in-on-icon-sidenav material-icons mat-icon" role="img" aria-label="expand_more">expand_more</md-icon>
+</button>
+</div>
+</a>
+<div *ngIf="hide"> 
+<md-nav-list class="sidenav-list sidenav-list-nested mat-nav-list" fxlayout="column" role="list">
+<!----><a class="sidenav-anchor mat-ripple mat-list-item" md-list-item="" md-ripple="" role="listitem" routerlinkactive="active" [routerLink]="['/erasurereport']"><div class="mat-list-item-content">
+  <div class="mat-list-item-ripple mat-ripple" md-ripple="">
+  </div>
+
+
+
+<div class="mat-list-text"></div>
+ <md-icon role="img" class="material-icons mat-icon">verified_user</md-icon>
+ 
+    <span class="sidenav-item-name fade-in-on-icon-sidenav">Erasure Report</span>
+    <span fxflex=""></span>
+    <!---->
+  </div>
+</a>
+</md-nav-list>
+
+
+<md-nav-list class="sidenav-list sidenav-list-nested mat-nav-list" fxlayout="column" role="list">
+<!----><a class="sidenav-anchor mat-ripple mat-list-item" md-list-item="" md-ripple="" role="listitem" routerlinkactive="active" [routerLink]="['/functionalityreport']"><div class="mat-list-item-content">
+  <div class="mat-list-item-ripple mat-ripple" md-ripple="">
+  </div>
+<div class="mat-list-text"></div>
+ <md-icon role="img" class="material-icons mat-icon">phonelink_setup</md-icon>
+  
+    <span class="sidenav-item-name fade-in-on-icon-sidenav">Functionality Report</span>
+    <span fxflex=""></span>
+    <!---->  
+</div>
+</a>
+</md-nav-list>
+</div> 
+<div class="border-btm"></div>
+
+</div>
+
+<div class="sidenav-list sidenav-list-nested mat-nav-list" fxlayout="column" role="list">
+<!----><a class="sidenav-anchor mat-ripple mat-list-item" md-list-item="" md-ripple="" role="listitem" routerlinkactive="active" href="/components/autocomplete"><div class="mat-list-item-content">
+  <div class="mat-list-item-ripple mat-ripple" md-ripple="">
+  </div>
+<div class="mat-list-text"></div>
+  <md-icon role="img" class="material-icons mat-icon"> </md-icon>
+    <span class="sidenav-item-name fade-in-on-icon-sidenav">Connected Units</span>
+    <span fxflex=""></span>
+    <!---->  
+</div>
+</a>
+</div>
+
+<div class="sidenav-list sidenav-list-nested mat-nav-list" fxlayout="column" role="list">
+<!----><a class="sidenav-anchor mat-ripple mat-list-item" md-list-item="" md-ripple="" role="listitem" routerlinkactive="active" href="/components/autocomplete"><div class="mat-list-item-content">
+  <div class="mat-list-item-ripple mat-ripple" md-ripple="">
+  </div>
+<div class="mat-list-text"></div>
+  <md-icon role="img" class="material-icons mat-icon"> </md-icon>
+    <span class="sidenav-item-name fade-in-on-icon-sidenav">Erased Units</span>
+    <span fxflex=""></span>
+    <!---->  
+</div>
+</a>
+</div>
+
+<div class="sidenav-list sidenav-list-nested mat-nav-list" fxlayout="column" role="list">
+<!----><a class="sidenav-anchor mat-ripple mat-list-item" md-list-item="" md-ripple="" role="listitem" routerlinkactive="active" href="/components/autocomplete"><div class="mat-list-item-content">
+  <div class="mat-list-item-ripple mat-ripple" md-ripple="">
+  </div>
+<div class="mat-list-text"></div>
+  <md-icon role="img" class="material-icons mat-icon"> </md-icon>
+    <span class="sidenav-item-name fade-in-on-icon-sidenav">Failed Units</span>
+    <span fxflex=""></span>
+    <!---->  
+</div>
+</a>
+</div>
+<div class="border-btm"></div>
+<md-list-item class="mat-list-item padd-tb10" role="listitem">
+    
+     <a md-line [routerLink]="['/previousreport']"> <button md-icon-button>
+        <md-icon>restore</md-icon>
+      </button>Preivous Reports
+  </a>
+  
+  </md-list-item>
+
+  <md-list-item class="mat-list-item padd-tb10" role="listitem">
+    
+     <a md-line href="#"> <button md-icon-button>
+        <md-icon>devices</md-icon>
+      </button>Device Reports
+  </a>
+  
+  </md-list-item>
+
+  
+  <md-list-item class="mat-list-item padd-tb10" role="listitem">
+    
+     <a md-line [routerLink]="['/settings']"> <button md-icon-button>
+        <md-icon>settings</md-icon>
+      </button>Settings
+  </a>
+  
+  </md-list-item>
+
+</md-nav-list>
+
+</md-sidenav>
+  
+  

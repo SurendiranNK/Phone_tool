@@ -1,0 +1,62 @@
+<!--Edit-client-->
+
+<div class="edit-client-form">
+  
+  <md-input-container class="edit-client-full-width">
+   <input mdInput placeholder="First name" value="" [(ngModel)]="name" name="ngModel">
+  </md-input-container>
+  
+  <md-input-container class="edit-client-full-width">
+   <input mdInput placeholder="Phone" [(ngModel)]="phone" phone="ngModel">
+  </md-input-container>
+    
+  <p>
+    <md-input-container class="edit-client-full-width">
+      <textarea mdInput placeholder="Address"  [(ngModel)]="address1" address1="ngModel"></textarea>
+    </md-input-container>
+    <md-input-container class="edit-client-full-width">
+      <textarea mdInput placeholder="Address 2" [(ngModel)]="address2" address2="ngModel"></textarea>
+    </md-input-container>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="edit-client-full-width">
+      <input mdInput placeholder="City"  [(ngModel)]="city" city="ngModel">
+    </md-input-container></td>
+    <td><md-input-container class="edit-client-full-width">
+      <input mdInput placeholder="State" [(ngModel)]="state"  state="ngModel">
+    </md-input-container></td>
+    <td><md-input-container class="edit-client-full-width">
+      <input mdInput #postalCode maxlength="6" placeholder="Postal Code" value="" [(ngModel)]="postalcode" postalcode="ngModel">
+  </md-input-container></td>
+  </tr></table>
+  
+    <md-input-container class="edit-client-full-width">
+   <input mdInput placeholder="Country" [(ngModel)]="country" country="ngModel">
+  </md-input-container>
+  
+    <md-input-container class="edit-client-full-width">
+      <textarea mdInput placeholder="Note" [(ngModel)]="note" note="ngModel"></textarea>
+    </md-input-container>
+    
+    
+    <div class="edit-client-but-container">
+         <md-slide-toggle ngDefaultControl [(ngModel)]="device"
+         [color]="color"
+          (change)="onChange($event)" 
+          [checked]="checked"
+          [disabled]="disabled">
+        Client enabled
+      </md-slide-toggle>
+  <span class="flex-spacer"></span> 
+  <button md-button md-dialog-close=" " (click)="cancelSites()">CANCEL</button>
+  <!-- Can optionally provide a result for the closing dialog. -->
+  <button md-button md-dialog-close={{name}} (click)="addSites()">SAVE</button>
+
+
+</div>
+
+</div>
+
+
+<!--Edit-client-->

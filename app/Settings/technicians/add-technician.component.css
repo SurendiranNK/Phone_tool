@@ -1,0 +1,36 @@
+/* Edit-technician */
+
+
+.edit-technician-form {
+  width:700px;
+ /*  padding:20px 20px; */
+ font-family: Roboto Regular, sans-serif;
+}
+
+.edit-technician-full-width {
+  width: 100%;
+}
+
+.edit-technician-full-width tr {
+  margin:15px 0px;
+}
+
+.edit-technician-but-container
+{
+display:flex;
+margin:10px 0px 0px 0px;
+padding:20px 0px 0px 0px;
+border-top:1px solid #ddd;
+}
+.technician-flex-spacer
+{
+flex:1 1 auto;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+
+
+/* Edit-technician */

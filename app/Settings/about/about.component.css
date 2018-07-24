@@ -1,0 +1,17 @@
+
+/* open-source-licenses-list */
+
+.open-source-licenses-list
+{
+	padding:10px 20px;
+	width:280px;
+}
+
+   
+	
+.open-source-licenses-list-scroll
+{
+	 max-height: 468px;
+    overflow-y: scroll;
+}
+/* open-source-licenses-list */

@@ -1,0 +1,25 @@
+<div class="session-wrapper-outer">
+	<div class="session-wrapper">
+	<img _ngcontent-c16="" alt="" src="./app/assets/log1.png">
+
+	<div class="center login">
+	<md-card>
+
+
+	<md-input-container >
+	<input mdInput placeholder="Username" value="" required [(ngModel)]="username" #name="ngModel">
+
+	</md-input-container>
+
+	<md-input-container>
+	<input mdInput placeholder="Passphrase" type="password" value="" required [(ngModel)]="password" #name="ngModel" >
+	</md-input-container>
+	<div class="login-btn">
+	<button class="Login-button" md-button (click)="getloginDetails()"[disabled]="name.invalid" >LOGIN</button>
+	</div>
+
+	</md-card>
+	</div>
+
+	</div>
+</div>

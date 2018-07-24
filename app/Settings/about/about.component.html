@@ -1,0 +1,16 @@
+
+<!--open-source-licenses-list-->
+
+<div class="open-source-licenses-list">
+<div class="open-source-licenses-list-scroll">
+
+  <md-list *ngFor="let licenses of opensourcelicense">
+  <md-list-item  (click)="LicenseDialog()">{{licenses.name}}</md-list-item>
+ </md-list>
+</div>
+<md-dialog-actions align="end">
+  <button md-button md-dialog-close>OK</button>
+ </md-dialog-actions>
+</div>
+
+<!--open-source-licenses-list-->

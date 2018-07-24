@@ -1,0 +1,58 @@
+/* Edit-test-suite */
+
+
+.edit-test-suite-form {
+ /*  width:100%; */
+/*   padding:20px 20px; */
+font-family: Roboto Regular, sans-serif;
+width:750px;
+}
+.edit-test-suite-box
+{
+
+overflow-y: scroll;
+max-height:500px;
+}
+.edit-test-suite-full-width {
+  width: 100%;
+}
+
+.edit-test-suite-full-width tr {
+ padding-top:5px;
+}
+
+.edit-test-suite-chk-level1
+{
+padding:12px 0px 0px 0px;
+}
+.edit-test-suite-chk-level2
+{
+padding:12px 0px 12px 24px;
+}
+
+.edit-test-suite-chk-level3
+{
+padding-left:48px;
+}
+.edit-test-suite-but-container
+{
+display:flex;
+margin:10px 0px 0px 0px;
+padding:25px 0px 0px 0px;
+border-top:1px solid #ddd;
+}
+.edit-test-suite-flex-spacer
+{
+flex:1 1 auto;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.margin-top10margin-top10 {
+  margin: 10px;
+}
+
+
+/* Edit-test-suite */

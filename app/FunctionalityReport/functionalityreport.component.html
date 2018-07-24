@@ -1,0 +1,72 @@
+
+<nav>
+    <dashboard-data></dashboard-data>
+</nav>
+
+
+<div cdk-scrollable="" id="erasure-report" class="mat-sidenav-content">
+    <md-toolbar>
+        <span class="padd-left20">Functionality Report </span>
+    </md-toolbar>
+
+    <div class="erasure-report-select-bar">
+    </div>
+    <div class="main-content-box">
+
+
+        <div class="erasure-report-bar">
+
+            <md-list   *ngFor="let device of devices" class="demo-list mat-elevation-z2">
+                    <span>
+{{done_device.indexOf(device.serialNo) >= 0 ? "&#9745;":"&#9746;"}}
+                    </span>
+                    <md-list-item>
+                        <h4 md-line>{{device.manufacturer}}</h4>
+
+                        <div class="type-material-button">
+                            <button md-icon-button><md-icon>power_settings_new</md-icon></button>
+                        </div>
+
+                    </md-list-item>
+                    <md-list-item>
+                        <span md-line> Model : {{device.model}}</span>
+                    </md-list-item>
+                    <md-list-item>
+                        <span md-line>Version : {{device.version}}</span>
+                    </md-list-item>
+                    <md-list-item>
+                        <span md-line>Serial No : {{device.serialNo}}</span>
+                    </md-list-item>
+                    <md-list-item>
+                        <button md-raised-button (click)="deviceCheck(device.serialNo)" class="button-spacer but-medium-blue">Get Report</button>
+                    </md-list-item>
+            </md-list>
+        </div>
+    </div>
+    <div class="docs-footer">
+        <md-toolbar>
+            <span class="flex-spacer"></span> 
+                        <button md-raised-button (click)="refreshDeviceList()" class="button-spacer but-white">Refresh List</button>
+            <button md-raised-button (click)="onAbort()" class="button-spacer but-medium-blue">ABORT</button>
+            <button md-raised-button (click)="onStart()" class="button-spacer but-white">START</button>
+        </md-toolbar>
+    </div>
+    <div [hidden]="visible">
+        <md-progress-bar  mode="indeterminate"></md-progress-bar>
+    </div>
+
+        <table class="tb" id="restable">
+		<thead>
+			<tr>
+				<th class="text-left">TEST NAME</th>
+				<th class="text-left">TEST RESULT</th>
+			</tr>
+		</thead>
+		<tbody class="table-hover" id="rtable">
+			<tr *ngFor="let avl of testjsondata" >
+				<td> {{avl.name}} </td>
+				<td> {{avl.result}} </td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,33 @@
+
+/* start-loading-page */
+
+
+.loading-wrapper-outer
+{
+	height:100vh;
+	margin:0px;
+	padding:10% auto;
+	background:#eceff1;
+	
+}
+
+
+.loading-wrapper
+{
+
+margin:auto;
+ max-width:400px;
+ padding-top:10px;
+}
+
+.loading-wrapper img
+{
+	width:90px;
+	height:90px;
+	margin:50% 0px 40px 0px;
+	left:40%;
+	position:relative;
+	
+}
+
+/* start-loading-page */

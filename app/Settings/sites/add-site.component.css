@@ -1,0 +1,30 @@
+/* Edit-client */
+
+
+.edit-client-form {
+  width:100%;
+ /*  padding:20px 20px; */
+ font-family: Roboto Regular, sans-serif;
+}
+
+.edit-client-full-width {
+  width: 100%;
+}
+
+.edit-client-but-container
+{
+display:flex;
+margin:10px 0px;
+padding:20px 0px 0px 0px;
+border-top:1px solid #ddd;
+}
+.flex-spacer
+{
+flex:1 1 auto;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+/* Edit-client */

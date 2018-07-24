@@ -1,0 +1,277 @@
+<!-- Edit-test-suite -->
+
+<div class="edit-test-suite-form">
+
+  <div class="edit-test-suite-box">
+    <md-input-container class="edit-test-suite-full-width">
+      <input mdInput placeholder="Suite Title" [(ngModel)]="suite_title">
+    </md-input-container>
+    
+    <div class="edit-test-suite-full-width">
+       <md-slide-toggle [color]="bluecolor" [checked]="" [(ngModel)]="run_manualtest" [disabled]="disabled">
+     Only run manual test when related automated test fails
+    </md-slide-toggle>
+    </div>
+    <div class="edit-test-suite-chk-level1">
+     <md-checkbox class="example-margin" [(ngModel)]="alltests" (ngModelChange)="Alltests()">All Tests
+  </md-checkbox>
+</div>
+    
+   <div class="edit-test-suite-chk-level2">
+       <md-checkbox class="example-margin" [(ngModel)]="all_automated_tests" (ngModelChange)="All_automated_tests()">All Automated tests
+     </md-checkbox>
+     </div>
+  <div class="edit-test-suite-chk-level3">
+    
+    <table class="edit-test-suite-full-width" cellspacing="0">
+      <tr class="margin-top10">
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_wifi" (ngModelChange)="All_automated_testscases()">WiFi</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Cellular" (ngModelChange)="All_automated_testscases()">Cellular</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Blutooth" (ngModelChange)="All_automated_testscases()">Blutooth</md-checkbox>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Gps" (ngModelChange)="All_automated_testscases()">GPS</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_device_not_jailbroken" (ngModelChange)="All_automated_testscases()">Device is not jailbroken</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Battery_charge" (ngModelChange)="All_automated_testscases()">Battery Charge</md-checkbox>
+        </td>
+      </tr>
+
+      <tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Vibration_Accelerometer" (ngModelChange)="All_automated_testscases()">Vibration+Accelerometer</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Camera_Back_Flashlight" (ngModelChange)="All_automated_testscases()">Camera(back)+Flashlight</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Camera_Front_Flashlight" (ngModelChange)="All_automated_testscases()">Camera(front)-Read QR</md-checkbox>
+        </td>
+      </tr>
+
+      <tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Camera_Back_ReadQR" (ngModelChange)="All_automated_testscases()">Camera(back)-Read QR</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Microphone_Speaker" (ngModelChange)="All_automated_testscases()">Microphone+Speaker</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Usb_Data" (ngModelChange)="All_automated_testscases()">USB Data</md-checkbox>
+        </td>
+      </tr>
+
+ <tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Usb_Power" (ngModelChange)="All_automated_testscases()">USB Power</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_IMEI_Blacklist" (ngModelChange)="All_automated_testscases()">IMEI Blacklist</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Simcard" (ngModelChange)="All_automated_testscases()">SIM Card</md-checkbox>
+        </td>
+      </tr>
+
+
+<tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Activation_Lock" (ngModelChange)="All_automated_testscases()">Activation Lock</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Carrier_Lock" (ngModelChange)="All_automated_testscases()">Carrier Lock</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="AT_Warranty" (ngModelChange)="All_automated_testscases()">Warranty</md-checkbox>
+        </td>
+      </tr>
+
+
+
+    </table>
+    
+  </div>
+  
+  
+  
+   <div class="edit-test-suite-chk-level2">
+       <md-checkbox class="example-margin" [(ngModel)]="all_manual_tests" (ngModelChange)="All_manual_tests()" >All Manual tests
+     </md-checkbox>
+     </div>
+  <div class="edit-test-suite-chk-level3">
+    
+    <table class="edit-test-suite-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Touchscreen_singletouch"  (ngModelChange)="All_manual_testscases()">Touchscreen(single touch)</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Touchscreen_multitouch" (ngModelChange)="All_manual_testscases()">Touchscreen(multi-touch)</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Screen_Brightness" (ngModelChange)="All_manual_testscases()">Screen Brightness</md-checkbox>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Dead_Pixels" (ngModelChange)="All_manual_testscases()">Dead pixels</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Fingerprint" (ngModelChange)="All_manual_testscases()">Fingerprint Reader</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Home_Button" (ngModelChange)="All_manual_testscases()">Home Button</md-checkbox>
+        </td>
+      </tr>
+
+      <tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Volume_Buttons" (ngModelChange)="All_manual_testscases()">Volume Buttons</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Silent_Mode" (ngModelChange)="All_manual_testscases()">Silent Mode Switch</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Vibration" (ngModelChange)="All_manual_testscases()">Vibration</md-checkbox>
+        </td>
+      </tr>
+
+      <tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Accelerometer" (ngModelChange)="All_manual_testscases()">Accelerometer</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Compass" (ngModelChange)="All_manual_testscases()">Compass</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Flashlight" (ngModelChange)="All_manual_testscases()"> Flashlight</md-checkbox>
+        </td>
+      </tr>
+
+<tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Camera_front" (ngModelChange)="All_manual_testscases()">Camera(front)</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_camera_back" (ngModelChange)="All_manual_testscases()">Camera(back)</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_MicroPhone" (ngModelChange)="All_manual_testscases()">MicroPhone</md-checkbox>
+        </td>
+      </tr>
+
+
+<tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Speaker" (ngModelChange)="All_manual_testscases()">Speaker</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Headphone" (ngModelChange)="All_manual_testscases()">Headphone Jack</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_USB_Port" (ngModelChange)="All_manual_testscases()">USB Port</md-checkbox>
+        </td>
+      </tr>
+
+
+<tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_USB_Power" (ngModelChange)="All_manual_testscases()">USB Power</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Proximity_Sensor"(ngModelChange)="All_manual_testscases()">Proximity Sensor</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Phone_Call" (ngModelChange)="All_manual_testscases()">Phone Call</md-checkbox>
+        </td>
+      </tr>
+
+<tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Cosemetic_Damage" (ngModelChange)="All_manual_testscases()">Cosemetic Damage</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Heavy_Damage" (ngModelChange)="All_manual_testscases()">Heavy Damage</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Water_Damage" (ngModelChange)="All_manual_testscases()"> Water Damage</md-checkbox>
+        </td>
+      </tr>
+
+
+<tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Simcard" (ngModelChange)="All_manual_testscases()">SIM Card</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Cellular" (ngModelChange)="All_manual_testscases()">Cellular</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Buletooth" (ngModelChange)="All_manual_testscases()">Buletooth</md-checkbox>
+        </td>
+      </tr>
+
+<tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_wifi" (ngModelChange)="All_manual_testscases()">WiFi</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Gps" (ngModelChange)="All_manual_testscases()">GPS</md-checkbox>
+        </td>
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Activation_lock" (ngModelChange)="All_manual_testscases()">Activation Lock</md-checkbox>
+        </td>
+      </tr>
+
+<tr>
+
+        <td>
+          <md-checkbox class="example-margin" [(ngModel)]="MT_Carrier_Lock" (ngModelChange)="All_manual_testscases()">Carrier Lock</md-checkbox>
+        </td>
+        
+      </tr>
+
+    </table>
+    
+  </div>
+    
+
+  </div>
+
+<div class="edit-test-suite-but-container">
+    <md-slide-toggle [color]="color" [checked]=""  [(ngModel)]="suite_enabled" [disabled]="disabled">
+     Suite enabled
+    </md-slide-toggle>
+    <span class="edit-test-suite-flex-spacer"></span>
+    <button md-button md-dialog-close="">CANCEL</button>
+    <!-- Can optionally provide a result for the closing dialog. -->
+    <button md-button md-dialog-close="" (click)="addTestSuites()">SAVE</button>
+  </div>
+
+</div>
+
+<!-- Edit-test-suite -->

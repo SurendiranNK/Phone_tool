@@ -1,0 +1,157 @@
+.app-content{
+  margin: 100px;
+  padding: 50px;
+
+}
+
+.app-input-icon {
+  font-size: 16px;
+}
+
+
+form {
+  width: 220px;
+  margin: 4em auto;
+  padding: 3em 2em 2em 2em;
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+  box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+
+}
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+
+}
+
+.corner-ribbon{
+  width: 200px;
+  background: #e43;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* Custom styles */
+
+.corner-ribbon.sticky{
+  position: fixed;
+}
+
+.corner-ribbon.shadow{
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+/* positions */
+.corner-ribbon.top-right{
+  top: 25px;
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+#err {
+  color : red;
+}
+
+
+
+/* Amar */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.secondary {
+  color: rgba(0,0,0,0.54);
+}
+
+[md-fab] {
+  position: absolute;
+  right: 3%;
+  top: 34px;
+  z-index: 1;
+}
+
+md-sidenav-layout {
+  background: rgba(0,0,0,0.03);
+}
+
+md-input {
+  margin: 8px 0;
+  width: 100%;
+}
+
+md-radio-button, md-checkbox {
+  margin: 16px 8px;
+}
+
+.form {
+  display: flex;
+}
+
+.form md-card {
+  flex-grow: 1;
+}
+
+md-card {
+  width: 400px;
+  box-sizing: border-box;
+  margin: 16px;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.session-wrapper
+{
+
+margin:auto;
+ max-width:400px;
+ padding-top:10px;
+}
+
+.session-wrapper img
+{
+    width:194px;
+    height:194px;
+    margin:28% 0px 25px 115px;
+}
+
+.session-wrapper-outer
+{
+    height:100vh;
+    margin:0px;
+    padding:10% auto;
+    background:#eceff1;
+    
+}
+
+.Login-button
+{
+  color:#2196F3 !important;
+  background-color:none;
+}
+.login-btn {text-align: right;}
+.center
+{
+text-align: center;
+margin: 0 auto
+
+}
+
+.center  .md-input-container
+
+{
+    width:300px !important;
+}

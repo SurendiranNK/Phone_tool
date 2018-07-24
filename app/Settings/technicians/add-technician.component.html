@@ -1,0 +1,131 @@
+<!--Edit-technician-->
+
+<div class="edit-technician-form">
+  
+  <md-input-container class="edit-technician-full-width">
+   <input mdInput placeholder="Name" [(ngModel)]="name" name="ngModel">
+  </md-input-container>
+  
+  <md-input-container class="edit-technician-full-width">
+   <input mdInput placeholder="Username" [(ngModel)]="username" username="ngModel">
+  </md-input-container>
+    
+    <table class="edit-technician-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="edit-technician-full-width">
+      <input mdInput placeholder="Passphrase" [(ngModel)]="password" password="ngModel">
+    </md-input-container></td>
+    <td><md-input-container class="edit-technician-full-width">
+      <input mdInput placeholder="Passphrase Confirm" [(ngModel)]="confirmpassword" confirmpasswod="ngModel">
+    </md-input-container></td>
+  </tr></table>
+  
+     <table class="edit-technician-full-width" cellspacing="0">
+       <tr>
+    <td>  <md-slide-toggle ngDefaultControl value="" [(ngModel)]="technicians"
+    
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+         
+        Manages technicias
+      </md-slide-toggle></td>
+    <td>  <md-slide-toggle ngDefaultControl [(ngModel)]="suites"
+    
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Manages test suites
+        
+      </md-slide-toggle></td>
+    </tr>
+    
+           <tr>
+    <td>  <md-slide-toggle ngDefaultControl [(ngModel)]="deviceimages"
+    
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Manages device images
+      </md-slide-toggle></td>
+    <td>  <md-slide-toggle ngDefaultControl [(ngModel)]="clients"
+    
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Manages clients
+      </md-slide-toggle></td>
+    </tr>
+    
+           <tr>
+    <td>  <md-slide-toggle ngDefaultControl [(ngModel)]="sites"
+    
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Manages sites
+      </md-slide-toggle></td>
+    <td>  <md-slide-toggle ngDefaultControl [(ngModel)]="usb"
+    
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+       Manages USB hubs
+      </md-slide-toggle></td>
+    </tr>
+    
+           <tr>
+    <td>  <md-slide-toggle ngDefaultControl [(ngModel)]="license"
+    
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Manages license importing
+      </md-slide-toggle></td>
+    <td>  <md-slide-toggle ngDefaultControl [(ngModel)]="fulldevicelogs"
+   
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Can view full device logs
+      </md-slide-toggle></td>
+    </tr>
+
+
+           <tr>
+    <td>  <md-slide-toggle ngDefaultControl [(ngModel)]="fullreport"
+   
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Can view full report history
+      </md-slide-toggle></td>
+    <td>  <md-slide-toggle ngDefaultControl [(ngModel)]="poweroff"
+    
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Can power off the system
+      </md-slide-toggle></td>
+    </tr>
+
+    
+    </table>
+    
+<div class="edit-technician-but-container">
+         <md-slide-toggle ngDefaultControl [(ngModel)]="loginenabled"
+    
+         [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Login enabled
+      </md-slide-toggle>
+  <span class="technician-flex-spacer"></span> 
+  <button md-button md-dialog-close={{name}}>CANCEL</button>
+  <!-- Can optionally provide a result for the closing dialog. -->
+  <button md-button md-dialog-close={{name}} (click)="addTechnicians()">SAVE</button>
+</div>
+
+
+</div>
+
+<!--Edit-technician-->

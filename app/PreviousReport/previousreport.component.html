@@ -1,0 +1,76 @@
+<nav>
+    <dashboard-data></dashboard-data>
+</nav>
+
+<div class="mat-sidenav-content mat-sidenav-pre-report">
+
+    <md-toolbar>
+        <span class="padd-left20">Previous Report</span>
+    </md-toolbar>
+
+    <div class="main-content-box">
+
+   <div class="search-wrapper">
+            <div class="search-bar back-border-shadow" fxflex="" style="flex: 1 1 1e-09px; box-sizing: border-box; -webkit-box-flex: 1;">
+                <form class="search-form ng-untouched ng-pristine ng-valid" fxshow="false" fxshow.gt-xs="" novalidate="" style="">
+                    <md-icon class="search-icon material-icons mat-icon" role="img" aria-label="search">search</md-icon>
+                    <input class="search-input"  autofocus="true" placeholder="Search" type="text">
+                </form>
+            </div>
+        </div>
+        <!-- <md-list class="demo-list mat-elevation-z2" fxflex="" style="flex: 1 1 1e-09px; box-sizing: border-box; -webkit-box-flex: 1;">
+         <md-icon class="search-icon material-icons mat-icon" role="img" aria-label="search">search</md-icon>
+          <md-list-item>
+             <h3 md-line>John</h3>
+             <p md-line>Brunch?</p>
+             <p md-line class="subline">Did you want to go on Sunday? I was thinking</p>
+           </md-list-item>
+
+          </md-list> -->
+
+        <div class="prev-report-list-container">
+            <div class="mat-list-item mat-list-item-content pad-top10" role="listitem" *ngFor="let subreport of PreviousReport">
+                 <!--<md-list-item class="mat-list-item prev-list" role="listitem" *ngFor="let subreport of PreviousReport">-->
+                 <!--
+                 <div *ngIf="tempdate!= subreport.report_date">
+                    <span class="prev-text-contents">{{subreport.report_date}}</span>
+                    <div "tempdate = subreport.report_date">
+                        <input ng-value={{tempdate}} ng-model="tempdate" />
+                    {{ tempdate }}
+                    </div>
+                 </div>-->
+                 <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                           {{subreport.model}}
+                      </mat-panel-title>
+                        <mat-panel-title>
+                             {{subreport.sr_no}}
+                        </mat-panel-title>
+                        <mat-panel-title>
+                           {{subreport.report_date}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div  layout-fill class="expanded">
+                        <br>
+                        <table class="tb" id="restable">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">TEST NAME</th>
+                                    <th class="text-left">TEST RESULT</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover" id="rtable">
+                                    <tr *ngFor="let avl of subreport.status | objectValues">
+                                    <td> {{avl.name}}   </td>
+                                    <td> {{avl.result}} </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </mat-expansion-panel>
+                <!--</md-list-item>-->
+            </div>
+        </div>
+    </div>
+</div>

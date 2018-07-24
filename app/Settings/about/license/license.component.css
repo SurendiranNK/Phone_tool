@@ -1,0 +1,13 @@
+/* open-source-licenses-list */
+
+.open-source-licenses-list
+{
+	padding:10px 20px;
+	width:280px;
+}
+
+.open-source-licenses-list-scroll
+{
+	min-height:300px !important;
+}
+/* open-source-licenses-list */

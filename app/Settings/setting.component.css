@@ -1,0 +1,172 @@
+
+/* settings*/
+
+
+
+
+.mat-sidenav-content {
+    position: relative;
+    transform: translate3d(0,0,0);
+    display: block;
+    height: 100%;
+   /*  overflow: auto; */
+	margin-left: 280px;
+margin-right: 0px;
+transform: translate3d(0px, 0px, 0px);
+transition-duration: .4s;
+transition-timing-function: cubic-bezier(.25,.8,.25,1);
+transition-property: transform,margin-left,margin-right;
+padding:0px 0px 0px 0px;
+}
+
+
+
+.mat-sidenav-content md-toolbar
+{
+	background:#3f51b5;
+	color:#fff;
+	max-height:64px !important;
+}
+
+.main-content-box
+{
+	padding:30px 20px 0px 20px;
+}
+
+
+
+.setting-tabs-list 
+{
+	margin:5px 0px 0px 0px !important;
+	
+}
+
+
+.clients-tabs-list 
+{
+	margin:10px !important;
+	
+}
+
+.setting-tabs-list a
+{
+	
+	text-decoration:none;
+	color:#333;
+}
+
+
+.setting-list-subtitle {
+    font-family: Roboto Regular, sans-serif;
+    font-size: 12px;
+    color: #999999;
+	display:block;
+	padding-left:0px;
+}
+
+.setting-tabs-list .mat-tab-body-content
+{
+	overflow:hidden !important;
+}
+
+
+.settings-text-list-head
+{
+	line-height: 19px;
+    letter-spacing: 0px;
+  
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
+    transform: matrix(1, 0, 0, 1, 320, 128);
+	padding-bottom:0px;
+	padding-top:10px;
+	
+	
+}
+
+
+.material-list-subtitle {
+    font-family: Roboto Regular, sans-serif;
+    font-size: 12px;
+    color: #999999;
+	display:block;
+	padding-left: 40px;
+}
+
+.mat-list-item md-icon
+{
+	padding-right:20px;
+}
+
+
+.setting-icon-text-list .mat-icon
+{
+	color:#333 !important;
+	    padding-top: 38px;
+}
+
+.setting-icon-text-list a
+{
+	text-decoration:none;
+	color:#333;
+}
+
+.setting-about-us
+{
+	padding:10px 20px;
+	max-height:500px;
+     overflow-y:auto;
+}
+
+
+/* settings*/
+
+
+.settings .mat-tab-body-wrapper
+{
+height:100% !important;	
+}
+
+.settings .mat-tab-body-content {
+    min-height:100% !important;	
+    overflow: hidden;
+}
+
+.setting-popup-but
+{
+	width:50px;
+	height:50px;
+	position:absolute;
+	right:10px;
+	bottom:20px;
+	
+}
+
+
+.setting-popup-but-txt-link a
+{
+	color:#2196f3 !important;
+	width:200px;
+	height:50px;
+	position:absolute;
+	right:10px;
+	bottom:20px;
+	cursor:pointer;
+}
+.setting-popup-but md-fab
+{
+	background-color:#2196f3 !important;	
+}
+
+.tab-max-height
+{
+	min-height:80vh;
+}
+
+.tab-cont-box
+{
+	padding:20px;
+	max-height:500px;
+    overflow-y:auto;
+}

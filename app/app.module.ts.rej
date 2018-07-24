@@ -1,0 +1,10 @@
+diff a/app/app.module.ts b/app/app.module.ts	(rejected hunks)
+@@ -23,7 +23,7 @@
+ import { SettingComponent } from './Settings/setting.component';
+ import { AddClientComponent,TechnicianComponent,SuitesComponent,DevicesImagesComponent,SitesComponent} from './Settings/setting.component';
+ 
+-
++import { SocketService } from './ErasureReport/socketService';
+ 
+ @NgModule({
+   declarations: [

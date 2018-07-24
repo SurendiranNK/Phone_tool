@@ -1,0 +1,1 @@
+{"version":3,"file":"functionalityreport.component.js","sourceRoot":"","sources":["functionalityreport.component.ts"],"names":[],"mappings":";;;;;;;;AAAA,sCAA0C;AAS1C,IAAa,4BAA4B;IAAzC;IACA,CAAC;IAAD,mCAAC;AAAD,CAAC,AADD,IACC;AADY,4BAA4B;IANxC,gBAAS,CAAC;QACT,QAAQ,EAAE,oBAAoB;QAE9B,WAAW,EAAE,8DAA8D;QAC3E,SAAS,EAAE,CAAC,6DAA6D,CAAC;KAC3E,CAAC;GACW,4BAA4B,CACxC;AADY,oEAA4B"}

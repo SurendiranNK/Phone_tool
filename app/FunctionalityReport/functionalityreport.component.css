@@ -1,0 +1,279 @@
+
+
+/* Erasure report*/
+
+
+
+#erasure-report.mat-sidenav-content {
+    position: relative;
+    transform: translate3d(0,0,0);
+    display: block;
+    height: 100%;
+   /*  overflow: auto; */
+	margin-left: 280px;
+margin-right: 0px;
+transform: translate3d(0px, 0px, 0px);
+transition-duration: .4s;
+transition-timing-function: cubic-bezier(.25,.8,.25,1);
+transition-property: transform,margin-left,margin-right;
+padding:0px 0px 0px 0px;
+}
+
+
+
+.mat-sidenav-content md-toolbar
+{
+	background:#3f51b5;
+	color:#fff;
+	max-height:64px !important;
+}
+
+.main-content-box
+{
+	padding:30px 20px 0px 20px;
+}
+
+
+.demo-list {
+    margin: 24px 0;
+    background: #fff;
+    width:32%; 
+	margin-right:10px;
+	max-height:200px;
+	overflow-y:auto;
+}
+
+
+.erasure-report
+{
+	margin-top:0px;
+}
+
+.erasure-report .mat-list .mat-list-item
+{
+	font-size:14px !important;
+}
+
+.erasure-report-select-bar
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0px;
+    flex-direction:row;
+	height:60px;
+	background:#333;
+}
+
+.erasure-report-select-bar .mat-select-trigger
+{
+	    height: 48px !important;
+    min-width: 82vh !important;
+}
+
+.erasure-report-bar
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0px 0px 13px;
+    flex-direction:row;
+}
+
+.erasure-report .mat-toolbar-row
+{height:auto;
+}
+
+.erasure-report md-toolbar{
+    min-height: 64px;
+	box-shadow:0px !important;
+}
+
+.erasure-report .mat-list-item{
+	
+	height:23px !important;
+}
+
+.erasure-report .mat-list{
+	
+	padding:0px 0px 25px 0px !important;
+} 
+
+.erasure-report md-toolbar
+{
+	background:#fff;
+	color:#fff;
+
+}
+	.clear
+	{
+		clear:both;
+	}
+	
+	
+	.erasure-report-bar h4
+	{
+		font-size:18px !important;
+		color:#000;
+	}
+	
+	#erasure-report .mat-select
+    {
+	padding-top: 13px!important;
+    width: 97% !important;
+    margin-left: 10px!important;
+	
+	}
+	
+ .mat-option
+	{
+		font-size:14px !important;
+		
+		 padding: 3px 10px 20px 10px !important;
+		 height: 100% !important;
+		 background:#616161 !important;
+			color:#fff;
+		
+	}
+	
+	.mat-select-content
+	{
+		   min-width:240px !important;
+		      
+	}
+	
+	
+	
+	#erasure-report .mat-select-panel
+	{
+		   max-height:100% !important;
+	}
+	
+	#erasure-report .mat-select-panel-done-animating
+	{
+		width:250px !important;
+		background:#616161 !important;
+	}
+	
+	
+.type-material-button .material-button-ripple-container {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.type-material-button md-icon
+{
+	padding-right:0px !important;
+}
+
+
+
+
+.button-spacer {
+	margin: 0 14px;
+}
+
+.docs-footer md-toolbar{
+    background:#40c4ff;
+    color: #fff;
+	 display:flex;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+
+.but-medium-blue
+{
+	background:#339dcc;
+	color:#333 !important;
+}
+
+
+.but-white
+{
+	background:#fff;
+	color:#333 !important;
+	
+}
+
+/* for table all*/
+.tb .table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  #height: 220px;
+  margin-left:60px;
+  max-width: 600px;
+  padding:3px;
+  width: 60%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+.tb th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:13px;
+  font-weight: 80;
+  padding:14px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+.tb th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+.tb th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+.tb tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:13px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+.tb tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+}
+  
+.tb tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+.tb tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+.tb td {
+  background:#FFFFFF;
+  padding:10px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:80;
+  font-size:13px;
+  border-right: 1px solid #C1C3D1;
+}
+
+.available {
+    background-color:lightgreen;
+}
+
+/* Erasure report*/

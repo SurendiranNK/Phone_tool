@@ -1,0 +1,401 @@
+<nav>
+<dashboard-data></dashboard-data>
+</nav>
+ 
+ <div cdk-scrollable=""  class="mat-sidenav-content">
+ 
+ <md-toolbar>
+
+<span class="padd-left20">Settings</span>
+
+
+
+
+
+
+</md-toolbar>
+
+
+<md-tab-group>
+  
+
+ <md-tab  *ngFor="let tab of tabs" label={{tab.name}} (click)="clickMe()" >
+
+ 
+   <div class="tab-max-height">
+   
+    <div *ngIf="tab.name=='TEST SUITES'" class="tab-cont-box">
+	<md-list *ngFor="let suits of Testsuits">
+  <md-list-item (click)="Edit_Testsuites_Details()">{{suits.name}}</md-list-item>
+ 
+</md-list>
+
+
+ <div class="setting-popup-but">
+
+<a md-fab (click)="SuiteDialog()"><md-icon>add</md-icon></a>
+ </div>
+
+</div>
+	
+
+
+
+
+ 
+
+
+
+
+
+
+
+<div *ngIf="tab.name=='DEVICE IMAGES'" class="tab-cont-box">
+	<md-list-item *ngFor="let deviceimages of deviceimages_List" class="mat-list-item" >
+	  <div class="setting-tabs-list">
+	  <a md-line  (click)="Edit_device_images_Details($event, deviceimages)"> 
+	 {{deviceimages.device_name}}
+	 <span class="setting-list-subtitle">{{deviceimages.os_version}}</span>
+	 </a>
+	  </div>
+	</md-list-item>
+	
+	  
+	
+	
+	 
+	
+	 
+	  <div class="setting-popup-but">
+
+<a md-fab (click)="DeviceimageDialog()"><md-icon>add</md-icon></a>
+ </div>
+
+</div>
+
+
+
+
+<div *ngIf="tab.name=='CLIENTS'" class="tab-max-height">
+	  <div class="tab-cont-box">
+	  <md-list-item class="mat-list-item clients-tabs-list">
+	   <span class="settings-text-list-head">Internal (No Client)</span>
+	  <div class="setting-tabs-list" *ngFor="let client of Client">
+	 
+
+
+	  <a md-line (click)="Edit_Client_Details($event, client)"> 
+	  {{client.name}}
+	 <span class="setting-list-subtitle">{{client.phone}}</span>
+	 <span class="setting-list-subtitle">{{client.address}},{{client.city}},{{client.zipcode}}</span>
+	 </a>
+	 
+	  </div>
+	</md-list-item>
+	 </div>
+
+<div class="setting-popup-but">
+
+<a md-fab (click)="Add_Client_Details()"><md-icon>add</md-icon></a>
+ </div>
+
+	  </div>
+	 
+
+
+<div *ngIf="tab.name=='TECHNICIANS'" class="tab-max-height">
+ <div class="tab-cont-box">
+    <md-list-item class="mat-list-item setting-icon-text-list" role="listitem" *ngFor="let technician of Technician">
+    <a md-line (click)="Edit_Technican_Details($event, technician)" > <button md-icon-button>
+        <md-icon>account_circle</md-icon>
+      </button>{{technician.username}}
+	 <span class="material-list-subtitle text-dec-none">{{technician.roles}}</span>
+	 </a>
+  
+  </md-list-item>
+  </div> 
+
+<div class="setting-popup-but">
+
+<a md-fab (click)="TechnicianDialog()"><md-icon>add</md-icon></a>
+ </div>
+
+ </div>
+ 
+ 
+
+ 
+	<div *ngIf="tab.name=='SITES'" class="tab-max-height">
+	<div class="tab-cont-box">
+	  <md-list-item class="mat-list-item clients-tabs-list" *ngFor="let site of Site">
+	   <span class="settings-text-list-head">{{site.name}}</span>
+	  <div class="setting-tabs-list">
+	  
+	 <a md-line (click)="Edit_Site_Details($event, site)"> 
+	  
+	 <span class="setting-list-subtitle">{{site.phone}}</span>
+	 </a>
+	  </div>
+	</md-list-item>
+	</div>
+<div class="setting-popup-but">
+
+<a md-fab (click)="sitesDialog()"><md-icon>add</md-icon></a>
+ </div>
+
+	</div>
+
+ 
+
+
+<div  *ngIf="tab.name=='ABOUT'">
+	
+	  <div class="setting-about-us">
+	<div class="tab-max-height">	
+		
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed ex rhoncus, laoreet lorem et, tempor nisl. Nunc blandit gravida nulla sagittis lobortis. Etiam posuere diam a metus fermentum, eget convallis massa vestibulum. Sed porttitor bibendum tellus, vel iaculis augue volutpat non. In sollicitudin rhoncus est, nec vulputate turpis bibendum et. Donec justo quam, mollis in sagittis in, sagittis ut quam. Aliquam erat volutpat. Donec blandit nibh sit amet pretium porttitor. Aliquam at tempor eros, vitae convallis sem. Aliquam dolor lacus, finibus volutpat iaculis quis, dictum quis est. Ut maximus, urna id mollis ornare, est est hendrerit libero, ut dictum dui mauris et diam. Aliquam id varius dui. Sed euismod imperdiet elit eget varius. Suspendisse potenti. Curabitur dui arcu, semper nec imperdiet mattis, elementum sed felis.</p>
+
+<p>Phasellus eget eleifend leo. Sed placerat odio felis, eget interdum leo tristique in. Aliquam sit amet lorem placerat mi sollicitudin blandit. Donec dapibus sollicitudin nisi nec dapibus. Mauris ultricies in tellus at convallis. Donec tellus metus, suscipit vitae lorem ac, pellentesque accumsan lorem. Quisque eu auctor orci, quis bibendum mi. Aliquam fringilla orci at auctor varius. Nunc eu sem accumsan, vehicula purus non, pulvinar sem. Morbi commodo, nisl nec egestas blandit, sapien nulla efficitur purus, ut faucibus neque mi vehicula est. Nulla aliquet convallis luctus. Praesent suscipit turpis sit amet dapibus consequat. Fusce fermentum pharetra odio eu efficitur. Nullam sed dolor ipsum. Sed non efficitur dui, at dapibus ante.</p>
+
+<p>Morbi gravida nisl ac ligula convallis, a pellentesque velit efficitur. Vivamus aliquet, sapien ac gravida cursus, felis arcu fringilla urna, sed feugiat est nunc id lacus. In eget felis efficitur, ultrices metus viverra, laoreet arcu. Ut fermentum diam id neque semper condimentum. Mauris tincidunt bibendum elit sed lobortis. Phasellus convallis ornare varius. Fusce ut lorem non erat faucibus lobortis sit amet at mauris. Duis tincidunt lectus in ultricies efficitur. Morbi id felis turpis. Mauris convallis posuere molestie. Suspendisse dictum finibus ipsum, luctus vestibulum dui cursus sit amet. Cras libero justo, ultricies eu tempor quis, condimentum eu magna. Nunc fringilla at orci vel aliquam.</p>
+
+<p>In sed ligula in tellus sollicitudin rhoncus sed eget neque. Integer vel porta eros, vitae dictum dolor. Mauris euismod scelerisque velit. Donec eget ullamcorper ex. Ut quis lacinia nisl. Proin posuere eros euismod odio fringilla, quis volutpat arcu commodo. Nulla venenatis nisi at tempor sodales. Ut consequat tellus id arcu hendrerit eleifend. Vivamus aliquam vestibulum felis ut molestie. Vivamus ante elit, sollicitudin a feugiat vel, blandit vitae nunc. Etiam mollis volutpat mi at blandit. Donec cursus vehicula convallis. Fusce feugiat lacinia magna, sed porttitor enim congue eu. Vivamus imperdiet quis erat ut dictum.</p>
+
+<p>Donec eu posuere augue. In vulputate tellus est. Donec ac condimentum dui, consequat porta dolor. Nunc sit amet arcu dignissim, lacinia nulla tempor, aliquam ex. Maecenas nulla diam, sagittis vitae enim vitae, varius dignissim enim. Nulla sapien enim, maximus sed tincidunt vitae, feugiat a odio. Nam blandit euismod erat, sit amet finibus justo iaculis a. Sed enim tortor, pretium id commodo id, fermentum tristique urna. Proin finibus enim vel feugiat ullamcorper.</p>
+
+<p>Aliquam ultrices pulvinar tellus tempus molestie. Donec lacinia lacus ut magna rhoncus, id feugiat enim rutrum. Morbi at tristique felis. Proin facilisis vulputate justo sed viverra. In et feugiat magna, ut vestibulum est. Phasellus quis luctus arcu, eget sodales mi. Vestibulum mi sem, porta in hendrerit dictum, rutrum ac dui. Donec suscipit a eros vitae dictum. Curabitur ornare ornare libero, eu sodales lorem finibus vitae. Suspendisse id sodales lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur malesuada turpis nibh, vel dapibus odio rutrum eu. Duis quis accumsan est.</p>
+
+<p>Vestibulum vehicula posuere tellus, a lacinia nulla dictum vel. Curabitur ac nunc sem. Nunc placerat non augue sit amet malesuada. In rutrum egestas eros, nec pharetra quam hendrerit eget. Sed venenatis nulla nec nisi vehicula volutpat. Nunc urna nibh, tristique quis eleifend id, tempor et justo. Nam arcu lectus, lobortis quis ipsum sit amet, sodales tempor diam. Nulla eget elementum sem. Nunc eu eros non mauris commodo pretium ac vitae sem. Aliquam aliquam, ligula eget malesuada eleifend, leo tortor placerat orci, iaculis mattis elit eros eu urna. Vestibulum nunc lorem, convallis sit amet tempor a, euismod vitae ligula. Vestibulum efficitur vitae metus lacinia viverra. Nulla nec urna vitae sapien rhoncus maximus quis in tortor. Nullam dignissim leo justo, eget mattis turpis pellentesque id.</p>
+
+<p>Praesent eu dapibus augue. Nam at risus fringilla, accumsan elit non, varius ante. Quisque mauris velit, facilisis vel commodo vel, aliquet non dui. Sed in turpis nisl. Nam tempus viverra felis sit amet fermentum. Sed molestie dictum nisi, in fringilla ligula efficitur at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet rutrum ex eget semper. Pellentesque id imperdiet risus, vel vehicula tellus. Praesent rhoncus mi feugiat tortor facilisis egestas eu a quam. Suspendisse tempus arcu nec laoreet maximus. Sed dictum odio a malesuada ullamcorper.</p>
+
+<p>Vivamus suscipit, augue at consequat facilisis, magna risus varius urna, non suscipit libero diam non nulla. Donec sollicitudin nibh sit amet ullamcorper pharetra. Integer quam lorem, bibendum sed commodo quis, hendrerit eget justo. Vivamus eu accumsan mauris. Nam blandit leo ut elit egestas cursus. Sed euismod lobortis ipsum in semper. Integer eget arcu id nulla porta dictum volutpat id enim. Nam consequat, nulla in euismod auctor, tellus nisl luctus diam, vel tincidunt nunc ex rhoncus erat. Sed tristique interdum venenatis. Vivamus nec erat aliquet, condimentum lectus sit amet, aliquet dui.</p>
+
+<p>Nulla finibus, purus vitae fermentum dictum, neque elit vestibulum mauris, vel consectetur purus lorem a quam. Etiam eros dui, consectetur vitae malesuada nec, maximus pharetra nunc. Praesent pretium, erat in laoreet bibendum, nisi justo euismod libero, vitae sollicitudin ante nulla at eros. Vivamus non risus mattis, pellentesque erat non, viverra nunc. In molestie semper feugiat. In suscipit nunc ut dui tincidunt ultrices. Donec non mauris accumsan, ultrices elit a, scelerisque est. Pellentesque gravida, arcu tincidunt scelerisque placerat, est felis sodales neque, ut dignissim mauris nisi eget purus. Aenean maximus pellentesque facilisis. Praesent euismod massa vel ligula tristique, at interdum augue commodo. Integer ut fermentum arcu. Sed egestas sollicitudin viverra. Nullam risus enim, varius id finibus sed, porta nec turpis.</p>
+		
+		
+	  </div>	
+	  </div>
+<div class="setting-popup-but-txt-link">
+
+<a (click)="AboutDialog()">OPEN SOURCE LICENSES</a>
+
+
+
+ </div>
+
+</div>	
+	
+	
+
+
+
+
+
+
+  </div>
+
+
+ 
+
+
+
+
+  </md-tab>
+
+
+
+
+</md-tab-group>
+
+
+<!-- <nav>
+<dashboard-data></dashboard-data>
+</nav>
+ 
+ <div cdk-scrollable=""  class="mat-sidenav-content">
+ 
+ <md-toolbar>
+
+<span class="padd-left20">Settings</span>
+
+</md-toolbar>
+
+
+  <div class="main-content-box">
+   
+ 
+ <div class="settings">
+
+<md-tab-group>
+  <md-tab label="TEST SUITES" (click)="clickMe()">
+   <div class="tab-max-height">
+   
+    <div  class="tab-cont-box">
+	<md-list *ngFor="let suits of Testsuits">
+  <md-list-item (click)="Edit_Testsuites_Details()">{{suits.name}}</md-list-item>
+ 
+</md-list>
+
+
+ <div class="setting-popup-but">
+
+<a md-fab (click)="SuiteDialog()"><md-icon>add</md-icon></a>
+ </div>
+	</div>
+  </div>
+  </md-tab>
+  <md-tab label="DEVICE IMAGES">
+    
+  <md-list >
+	<div class="tab-max-height">
+	    <div class="tab-cont-box">
+	  <md-list-item *ngFor="let deviceimages of deviceimages_List" class="mat-list-item" >
+	  <div class="setting-tabs-list">
+	  <a md-line  (click)="Edit_device_images_Details($event, deviceimages)"> 
+	 {{deviceimages.device_name}}
+	 <span class="setting-list-subtitle">{{deviceimages.os_version}}</span>
+	 </a>
+	  </div>
+	</md-list-item>
+	
+	  
+	
+	 </div>
+	 </div>
+	</md-list>
+	 
+	  <div class="setting-popup-but">
+
+<a md-fab (click)="DeviceimageDialog()"><md-icon>add</md-icon></a>
+ </div>
+	
+  </md-tab>
+  
+    <md-tab label="CLIENTS">
+    
+	<div class="tab-max-height">
+	  <div class="tab-cont-box">
+	  <md-list-item class="mat-list-item clients-tabs-list">
+	   <span class="settings-text-list-head">Internal (No Client)</span>
+	  <div class="setting-tabs-list" *ngFor="let client of Client">
+	 
+
+
+	  <a md-line (click)="Edit_Client_Details($event, client)"> 
+	  {{client.name}}
+	 <span class="setting-list-subtitle">{{client.phone}}</span>
+	 <span class="setting-list-subtitle">{{client.address}},{{client.city}},{{client.zipcode}}</span>
+	 </a>
+	 
+	  </div>
+	</md-list-item>
+	 </div>
+	  </div>
+	 <div class="setting-popup-but">
+
+<a md-fab (click)="Add_Client_Details()"><md-icon>add</md-icon></a>
+ </div>
+	
+  </md-tab>
+  
+    <md-tab label="TECHNICIANS">
+	
+	
+<div class="tab-max-height">
+ <div class="tab-cont-box">
+    <md-list-item class="mat-list-item setting-icon-text-list" role="listitem" *ngFor="let technician of Technician">
+    <a md-line (click)="Edit_Technican_Details($event, technician)" > <button md-icon-button>
+        <md-icon>account_circle</md-icon>
+      </button>{{technician.username}}
+	 <span class="material-list-subtitle text-dec-none">{{technician.roles}}</span>
+	 </a>
+  
+  </md-list-item>
+  </div> 
+ </div>
+ 
+ <div class="setting-popup-but">
+
+<a md-fab (click)="TechnicianDialog()"><md-icon>add</md-icon></a>
+ </div>
+	
+    </md-tab>
+	
+	
+	  <md-tab label="SITES">
+    
+	<div class="tab-max-height">
+	<div class="tab-cont-box">
+	  <md-list-item class="mat-list-item clients-tabs-list" *ngFor="let site of Site">
+	   
+	  <div class="setting-tabs-list">
+	  
+	 <a md-line (click)="Edit_Site_Details($event, site)"> 
+	  <span class="settings-text-list-head">{{site.name}}</span>
+	 <span class="setting-list-subtitle">{{site.phone}}</span>
+	 </a>
+	  </div>
+	</md-list-item>
+	</div>
+	</div>
+
+ <div class="setting-popup-but">
+
+<a md-fab (click)="sitesDialog()"><md-icon>add</md-icon></a>
+ </div>
+
+
+  </md-tab>
+  
+  	  <md-tab label="ABOUT">
+    
+	<div class="tab-max-height">
+	
+	  <div class="setting-about-us">
+		
+		
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed ex rhoncus, laoreet lorem et, tempor nisl. Nunc blandit gravida nulla sagittis lobortis. Etiam posuere diam a metus fermentum, eget convallis massa vestibulum. Sed porttitor bibendum tellus, vel iaculis augue volutpat non. In sollicitudin rhoncus est, nec vulputate turpis bibendum et. Donec justo quam, mollis in sagittis in, sagittis ut quam. Aliquam erat volutpat. Donec blandit nibh sit amet pretium porttitor. Aliquam at tempor eros, vitae convallis sem. Aliquam dolor lacus, finibus volutpat iaculis quis, dictum quis est. Ut maximus, urna id mollis ornare, est est hendrerit libero, ut dictum dui mauris et diam. Aliquam id varius dui. Sed euismod imperdiet elit eget varius. Suspendisse potenti. Curabitur dui arcu, semper nec imperdiet mattis, elementum sed felis.</p>
+
+<p>Phasellus eget eleifend leo. Sed placerat odio felis, eget interdum leo tristique in. Aliquam sit amet lorem placerat mi sollicitudin blandit. Donec dapibus sollicitudin nisi nec dapibus. Mauris ultricies in tellus at convallis. Donec tellus metus, suscipit vitae lorem ac, pellentesque accumsan lorem. Quisque eu auctor orci, quis bibendum mi. Aliquam fringilla orci at auctor varius. Nunc eu sem accumsan, vehicula purus non, pulvinar sem. Morbi commodo, nisl nec egestas blandit, sapien nulla efficitur purus, ut faucibus neque mi vehicula est. Nulla aliquet convallis luctus. Praesent suscipit turpis sit amet dapibus consequat. Fusce fermentum pharetra odio eu efficitur. Nullam sed dolor ipsum. Sed non efficitur dui, at dapibus ante.</p>
+
+<p>Morbi gravida nisl ac ligula convallis, a pellentesque velit efficitur. Vivamus aliquet, sapien ac gravida cursus, felis arcu fringilla urna, sed feugiat est nunc id lacus. In eget felis efficitur, ultrices metus viverra, laoreet arcu. Ut fermentum diam id neque semper condimentum. Mauris tincidunt bibendum elit sed lobortis. Phasellus convallis ornare varius. Fusce ut lorem non erat faucibus lobortis sit amet at mauris. Duis tincidunt lectus in ultricies efficitur. Morbi id felis turpis. Mauris convallis posuere molestie. Suspendisse dictum finibus ipsum, luctus vestibulum dui cursus sit amet. Cras libero justo, ultricies eu tempor quis, condimentum eu magna. Nunc fringilla at orci vel aliquam.</p>
+
+<p>In sed ligula in tellus sollicitudin rhoncus sed eget neque. Integer vel porta eros, vitae dictum dolor. Mauris euismod scelerisque velit. Donec eget ullamcorper ex. Ut quis lacinia nisl. Proin posuere eros euismod odio fringilla, quis volutpat arcu commodo. Nulla venenatis nisi at tempor sodales. Ut consequat tellus id arcu hendrerit eleifend. Vivamus aliquam vestibulum felis ut molestie. Vivamus ante elit, sollicitudin a feugiat vel, blandit vitae nunc. Etiam mollis volutpat mi at blandit. Donec cursus vehicula convallis. Fusce feugiat lacinia magna, sed porttitor enim congue eu. Vivamus imperdiet quis erat ut dictum.</p>
+
+<p>Donec eu posuere augue. In vulputate tellus est. Donec ac condimentum dui, consequat porta dolor. Nunc sit amet arcu dignissim, lacinia nulla tempor, aliquam ex. Maecenas nulla diam, sagittis vitae enim vitae, varius dignissim enim. Nulla sapien enim, maximus sed tincidunt vitae, feugiat a odio. Nam blandit euismod erat, sit amet finibus justo iaculis a. Sed enim tortor, pretium id commodo id, fermentum tristique urna. Proin finibus enim vel feugiat ullamcorper.</p>
+
+<p>Aliquam ultrices pulvinar tellus tempus molestie. Donec lacinia lacus ut magna rhoncus, id feugiat enim rutrum. Morbi at tristique felis. Proin facilisis vulputate justo sed viverra. In et feugiat magna, ut vestibulum est. Phasellus quis luctus arcu, eget sodales mi. Vestibulum mi sem, porta in hendrerit dictum, rutrum ac dui. Donec suscipit a eros vitae dictum. Curabitur ornare ornare libero, eu sodales lorem finibus vitae. Suspendisse id sodales lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur malesuada turpis nibh, vel dapibus odio rutrum eu. Duis quis accumsan est.</p>
+
+<p>Vestibulum vehicula posuere tellus, a lacinia nulla dictum vel. Curabitur ac nunc sem. Nunc placerat non augue sit amet malesuada. In rutrum egestas eros, nec pharetra quam hendrerit eget. Sed venenatis nulla nec nisi vehicula volutpat. Nunc urna nibh, tristique quis eleifend id, tempor et justo. Nam arcu lectus, lobortis quis ipsum sit amet, sodales tempor diam. Nulla eget elementum sem. Nunc eu eros non mauris commodo pretium ac vitae sem. Aliquam aliquam, ligula eget malesuada eleifend, leo tortor placerat orci, iaculis mattis elit eros eu urna. Vestibulum nunc lorem, convallis sit amet tempor a, euismod vitae ligula. Vestibulum efficitur vitae metus lacinia viverra. Nulla nec urna vitae sapien rhoncus maximus quis in tortor. Nullam dignissim leo justo, eget mattis turpis pellentesque id.</p>
+
+<p>Praesent eu dapibus augue. Nam at risus fringilla, accumsan elit non, varius ante. Quisque mauris velit, facilisis vel commodo vel, aliquet non dui. Sed in turpis nisl. Nam tempus viverra felis sit amet fermentum. Sed molestie dictum nisi, in fringilla ligula efficitur at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet rutrum ex eget semper. Pellentesque id imperdiet risus, vel vehicula tellus. Praesent rhoncus mi feugiat tortor facilisis egestas eu a quam. Suspendisse tempus arcu nec laoreet maximus. Sed dictum odio a malesuada ullamcorper.</p>
+
+<p>Vivamus suscipit, augue at consequat facilisis, magna risus varius urna, non suscipit libero diam non nulla. Donec sollicitudin nibh sit amet ullamcorper pharetra. Integer quam lorem, bibendum sed commodo quis, hendrerit eget justo. Vivamus eu accumsan mauris. Nam blandit leo ut elit egestas cursus. Sed euismod lobortis ipsum in semper. Integer eget arcu id nulla porta dictum volutpat id enim. Nam consequat, nulla in euismod auctor, tellus nisl luctus diam, vel tincidunt nunc ex rhoncus erat. Sed tristique interdum venenatis. Vivamus nec erat aliquet, condimentum lectus sit amet, aliquet dui.</p>
+
+<p>Nulla finibus, purus vitae fermentum dictum, neque elit vestibulum mauris, vel consectetur purus lorem a quam. Etiam eros dui, consectetur vitae malesuada nec, maximus pharetra nunc. Praesent pretium, erat in laoreet bibendum, nisi justo euismod libero, vitae sollicitudin ante nulla at eros. Vivamus non risus mattis, pellentesque erat non, viverra nunc. In molestie semper feugiat. In suscipit nunc ut dui tincidunt ultrices. Donec non mauris accumsan, ultrices elit a, scelerisque est. Pellentesque gravida, arcu tincidunt scelerisque placerat, est felis sodales neque, ut dignissim mauris nisi eget purus. Aenean maximus pellentesque facilisis. Praesent euismod massa vel ligula tristique, at interdum augue commodo. Integer ut fermentum arcu. Sed egestas sollicitudin viverra. Nullam risus enim, varius id finibus sed, porta nec turpis.</p>
+		
+		
+		
+	  </div>
+
+
+</div>	
+	
+	<div class="setting-popup-but-txt-link">
+
+<a (click)="AboutDialog()">OPEN SOURCE LICENSES</a>
+
+
+
+ </div>
+	
+  </md-tab>
+	
+	
+</md-tab-group>
+ 
+ </div>
+  
+    </div>
+  -->

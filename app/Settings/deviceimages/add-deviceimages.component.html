@@ -1,0 +1,75 @@
+<!-- Edit-Device-Image -->
+
+<!-- Edit-Device-Image -->
+
+
+<div class="edit-device-image-form">
+  
+  <md-input-container class="edit-device-image-full-width">
+   <input mdInput placeholder="Device Name" [(ngModel)]="device_name" devicename="ngModel">
+  </md-input-container>
+ 
+    <table class="edit-device-image-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="edit-device-image-full-width">
+      <input mdInput placeholder="Os Type" [(ngModel)]="os_type">
+    </md-input-container></td>
+    <td><md-input-container class="edit-device-image-full-width">
+      <input mdInput placeholder="OS Version" [(ngModel)]="os_version">
+    </md-input-container></td>
+  </tr></table>
+  
+  
+     <table class="edit-device-image-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="edit-device-image-full-width">
+      <input mdInput placeholder="image" type="text" [(ngModel)]="image_name">
+
+    </md-input-container></td>
+    <!-- <td> <button md-mini-fab type="button" onclick="document.getElementById('fileToUpload').click()">
+  <label for="fileToUpload"><md-icon>add</md-icon></label>
+
+<label><md-icon>add</md-icon></label>
+
+</button>
+<input id="fileToUpload" type="file" style="display:none;"></td> -->
+
+<!-- <input type="file" name="img1" id="img1" onchange="document.getElementById('file_name').value = this.value.split('\\').pop().split('/').pop()"> -->
+<!-- <input mdInput placeholder="image" type="text" name="file_name" id="file_name" [(ngModel)]="image_name"> -->
+<input type="file"  (change)="fileChange($event)" placeholder="Upload file" accept=".jpeg,.png,.docx">
+  </tr></table>
+   
+  <!-- <input type="text" name="file_name" id="file_name"> -->
+   
+   <div class="edit-device-image-full-width">
+ <span class="edit-device-image-chk-level1">Filters</span> 
+</div>
+  
+  <div class="edit-device-image-but-container">
+ <span class="edit-device-image-chk-level2">IDI DeviceType:  <span class="edit-device-small-text">iPhone6,1</span> </span>
+  <span class="edit-device-image-flex-spacer"></span> 
+  <md-icon class="padd-top5px">remove_circle</md-icon>
+</div>
+  
+    <div class="edit-device-image-but-container">
+ <span class="edit-device-image-chk-level2">IDI DeviceType: <span class="edit-device-small-text">iPhone6,1</span> </span>
+  <span class="edit-device-image-flex-spacer"></span> 
+  <md-icon class="padd-top5px">remove_circle</md-icon>
+</div>
+
+  <div class="edit-device-image-but-container">
+<span class="edit-device-image-flex-spacer"></span> 
+<button md-button>ADD FILTER</button>
+</div>
+
+<div class="edit-device-image-but-container2">
+    <md-slide-toggle  ngDefaultControl [(ngModel)]="image_enabled"  class="padd-top5px" [color]="color" [checked]="checked" [disabled]="disabled" >
+    Image enabled
+    </md-slide-toggle>
+    <span class="edit-device-image-flex-spacer"></span>
+    <button md-button>CANCEL</button>
+    <!-- Can optionally provide a result for the closing dialog. -->
+    <button md-button md-dialog-close=" " (click)="adddeviceimages()">SAVE</button>
+  </div>
+
+</div>
+
+<!-- Edit-Device-Image -->
